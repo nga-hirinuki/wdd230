@@ -1,0 +1,12 @@
+@media screen and (min-width:650px ) {
+    
+    header {
+        background-color: black;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
