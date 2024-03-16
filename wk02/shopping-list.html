@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        /* name the 3 variables from 'ul' , 'input' and 'button'. */
+        const list = document.querySelector("ul");        /* go to the ul and store the item I type */
+        const input = document.querySelector("input")  /* type the item */
+        const button = document.querySelector("button") /* click btn to add itm in the ul*/
+
+        /* click btn to store my list */
+        button.addEventListener('click', () => {  /* click to activate */
+            const myItem = input.value;    /* variable myitem is  equal to what i typed */
+            input.value = '';                /* clean the input after adding the item */
+
+            const listItem = document.createElement("li");    /* create an element of li with text */
+            const listText = document.createElement('span');    /* create span inside li */
+            const listBtn = document.createElement('button');    /* create a btn inside li */
+
+            listItem.appendChild(listText);    /* put the text in li */
+            listText.textContent = myItem;       /* show the text that i wrote */
+            listItem.appendChild(listBtn);      /* put the btn in li */
+            listBtn.textContent = 'Delete';      /* write Delete on the btn */
+            list.appendChild(listItem);          /* put the li in ul */
+
+            //adds an event listener to each delete button, so they can be deleted when pressed
+            listBtn.addEventListener('click', function () { /*btn to remove the clicked item */
+                list.removeChild(listItem);    /* removes the whole li including text and btn */
+            });
+        })
+    </script>
+</body>
+
+</html>
