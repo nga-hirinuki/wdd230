@@ -29,8 +29,10 @@
 
 </head>
 
-<body>
+<body id = "main">
+
     <header>
+        <button id="darkBtn">Dark</button>
         <img src="images/nga-hirinuki.png" alt="Nga Hirinuki" width="125" height="125">
         <span class="title">Nga Hirinuki</span>
     </header>
@@ -44,19 +46,18 @@
         </ul>
     </nav>
 
-    <main>
+    <main >
         <h1>WDD 230: Web Frontend Development</h1>
         <section class="card">
             <h2><span>Learning Activities</span></h2>
-            <ul>
-                <li><a href=""></a>Week 01: <a href="wk01/chamber-site-plan.html">Layout</a> |<a
-                        href="wk01/media-query.html"> Media Query </a>| <a href="wk01/holygrail.html">Js Pen</a></li>
-                <li><a href=""></a>Week 02: <a href="https://codepen.io/Nga-Hirinuki/pen/gOyMeGr">Hamburger</a> |<a
-                        href="wk02/bom.html">BOM</a>| <a href="wk02/design.html">Favicon</a>| <a href="https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fnga-hirinuki.github.io%2Fwdd230%2F">fb</a></li>
-                <li><a href=""></a>Week 03: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
-                <li><a href=""></a>Week 04: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
-                <li><a href=""></a>Week 05: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
-                <li><a href=""></a>Week 06: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
+            <ul >
+                <li>Week 01: <a href="wk01/chamber-site-plan.html">Layout</a> | <a href="wk01/media-query.html"> Media Query </a> | <a href="wk01/holygrail.html">Js Pen</a></li>
+                <li>Week 02: <a href="https://codepen.io/Nga-Hirinuki/pen/gOyMeGr">Hamburger</a> |<a href="wk02/bom.html">BOM</a>| <a href="wk02/design.html">Favicon</a>| <a
+                        href="https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fnga-hirinuki.github.io%2Fwdd230%2F">fb</a> </li>
+                <li>Week 03: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
+                <li>Week 04: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
+                <li>Week 05: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
+                <li>Week 06: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
             </ul>
         </section>
 
@@ -78,6 +79,17 @@
         <p>Last Modification: 05/03/2024</p>
 
     </footer>
+    <SCRIPT>
+        const mybtn = document.querySelector("#darkBtn")
+
+        mybtn.addEventListener("click", () => {
+            const main = document.querySelector("#main");
+            main.classList.toggle("dark");
+        });
+
+
+
+    </SCRIPT>
 </body>
 
 </html>

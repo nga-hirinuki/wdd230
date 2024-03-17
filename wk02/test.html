@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <style>
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body id="main">
+    <div >
+        <p>This is the main content.</p>
+    </div>
+    <button id="darkBtn">Toggle Dark Mode</button>
+
+    <script>
+        // Select the button with ID "darkBtn"
+        const mybtn = document.querySelector("#darkBtn");
+
+        // Add event listener for "click" event
+        mybtn.addEventListener("click", () => {
+            // Select the element with ID "main"
+            const main = document.querySelector("#main");
+            
+            // Toggle the "dark" class on the main element
+            main.classList.toggle("dark");
+        });
+    </script>
+</body>
+</html>

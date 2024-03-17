@@ -20,8 +20,8 @@
         grid-gap:  1rem;
         margin: auto;
         width: 95%;
-        
-    }
+     }
+     
     main h1 {
         grid-column: 1/3;
     }

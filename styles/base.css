@@ -10,6 +10,19 @@ body {
     margin: auto;
 }
 
+#darkBtn {    
+    background-color: grey;
+    color: white;
+    padding: 5px 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;  
+}
+.dark {    
+    background-color: black;
+    color: white;
+}
+
 /*header and Navigation*/
 
 header {
@@ -19,6 +32,9 @@ header {
     justify-content: center;
     padding: 20px;
 }
+.title {
+    font-size: 2rem;
+    }
 
 header span {
     color: white;
@@ -59,8 +75,8 @@ main h1 {
     font-size: 1.5em;
 }
 
-.card h2 {
-    /* styles for each child of the parent */
+.card {
+    background-color: white;
 }
 
 .card span {
@@ -75,7 +91,7 @@ main h1 {
 .card a {
     /* paragraphs inside the sections */
     margin: 1rem;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .card ul {
@@ -88,6 +104,7 @@ main h1 {
 .card li {
     list-style-type: none;
     padding: .3rem;
+    color: black;
 }
 
 footer {
