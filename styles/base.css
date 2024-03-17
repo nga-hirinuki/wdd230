@@ -9,6 +9,7 @@ body {
     max-width: 80%;
     margin: auto;
 }
+
 /*header and Navigation*/
 
 header {
@@ -16,7 +17,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;}
+    padding: 20px;
+}
+
 header span {
     color: white;
     font-size: 3em;
@@ -24,12 +27,14 @@ header span {
 }
 
 nav {
-    background-color: rgb(133, 164, 139);
+    background-color: rgb(195, 221, 200);
     margin: auto 0;
 }
+
 nav ul li {
     list-style-type: none;
 }
+
 nav a {
     display: block;
     color: rgb(30, 50, 34);
@@ -37,10 +42,12 @@ nav a {
     padding: 1rem;
     text-decoration: none;
 }
+
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: rgb(186, 198, 188);
+    background-color: rgb(50, 63, 50);
+    color: rgb(255, 255, 255);
 }
+
 nav .active {
     background-color: rgb(45, 65, 49);
     color: white;
@@ -48,41 +55,45 @@ nav .active {
 
 /* sections learning activities and infomation */
 main h1 {
-    margin-top: 15px;   
+    margin-top: 15px;
     font-size: 1.5em;
 }
 
 .card h2 {
     /* styles for each child of the parent */
 }
+
 .card span {
     /* custom styling for the label */
-    background-color: rgb(70, 102, 76);
+    background-color: #2d4131;
     display: block;
     text-align: center;
     padding: 10px;
     color: #fff;
 }
+
 .card a {
     /* paragraphs inside the sections */
     margin: 1rem;
     line-height: 1.5
 }
+
 .card ul {
     list-style-type: none;
-    width:95%;
+    width: 95%;
     margin: auto;
     padding-top: 10px;
 }
+
 .card li {
     list-style-type: none;
-    padding: .3rem;  
+    padding: .3rem;
 }
 
 footer {
-    background-color: rgb(70, 102, 76);  
+    background-color: #2d4131;
     color: white;
     height: 10vh;
     text-align: center;
-   padding-top: 2vh;
+    padding-top: 2vh;
 }
