@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    
+}
+
+#logo {
+    display: block;
+    margin:  auto;
+    padding: 15px;
+}
+header h1 {
+    margin:  auto;
+    text-align: center;
+    padding: 15px;
+}
+main{
+    position: relative;
+    display: inline-block;
+}
+main img  {
+    width: 100%;
+    height: auto;
+}
+main button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px; /* Half of the button's height */
+    margin-left: -50px; /* Half of the button's width */
+    z-index: 1;
+    background-color: #DAF2C2;    
+    border-radius: 2rem;
+    padding: 5px 10px;
+  }
+
+section, aside, footer {
+    background-color: #DAF2C2;    
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+section h1 {
+    font-size: 2em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: block;
+    text-align: center;
+}
+nav a {
+    display: block;
+    padding:  10px;
+    text-decoration: none;
+    color:#023859;
+}
+nav a:hover {
+    background-color:#DAF2C2;
+    color:#023859;
+}
+nav .active {
+    background-color:#023859;
+    color: white;
+}
+
+footer {
+    background-color: #023859;
+    color: #DAF2C2;
+
