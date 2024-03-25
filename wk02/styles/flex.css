@@ -1,0 +1,68 @@
+.box {
+    width: 150px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 15px;
+}
+#box1 {
+    background-color: purple;
+    min-height: 150px;
+    flex-grow: 1;
+}
+#box2 {
+    background-color: rgb(0, 162, 255);
+    min-height: 100px; 
+    flex-grow: 1;
+}
+#box3 {
+    background-color: rgb(0, 255, 13);
+    min-height: 200px;
+    flex-grow: 1;
+}
+#box4 {
+    background-color: rgb(255, 21, 0);
+    min-height: 200px;
+    flex-grow: 1;
+}
+
+.container{
+    display: flex;
+    
+    /* center in the page
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;*/
+    /*flex-direction:row-reverse, row is default, column, column default*/
+    /*flex-direction:column;-this makes the boxes stack on top of each other instead of side by side */
+    /*flex-direction: row-reverse; - This will make the boxes go from right to left instead of left to right*/
+
+    /*justify-content:space-between;center, start, end, around, between*/
+    /*justify-content:space-around;- spread items evenly in the container*/
+    /*justify-content:space-between;-spread out items equally in the container*/
+    /*justify-content: space-evenly;-distribute items evenly in the container*/
+    
+    /*height: 50vh;-viewport relative unit vw or vh*/
+    /*align-items:center;-vertically centers items in a cross axis (if not set it will be at the top)*/
+    /*align-items:flex-end;-bottom, stretch, baseline, first*/
+
+    
+    /*flex-wrap: wrap;nowrap, wrap, wrap-reverse*/
+    /*flex-wrap: wrap;-default value for when there isn't enough room to fit all the items in one line*/
+    /*flex-wrap:wrap-reverse;-when there isn't enough room to fit all the items in one line, it goes from right*/
+  
+    /*align-content:center;-stretches items along the cross axis if they can't fit in one line*/
+    /*align-content: space-around;-places items with equal space above and below them*/
+    /*align-content:flex-start;-top, stretch, baseline, first/last*/
+    /*align-content:flex-end;-bottom, stretch, baseline, last/first*/
+    
+    /*align-content: flex-start;
+    column-gap: 1em;
+    row-gap: 1em;*/
+
+
+
+
+
+}
+
+
