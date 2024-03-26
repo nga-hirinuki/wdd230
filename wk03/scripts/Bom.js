@@ -28,7 +28,7 @@ function displayList(item) {
   let deletebutton = document.createElement('button');
   li.textContent = item; // note the use of the displayList parameter 'item'
 
-  deletebutton.textContent = '❌';
+  deletebutton.textContent = 'X';
   deletebutton.classList.add('delete'); // we add a class in the button element. class = "delete"
   li.append(deletebutton);// when input is executed a delete button is added.
   list.append(li);  // appending the <li> to the <ul>
