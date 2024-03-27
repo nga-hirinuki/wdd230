@@ -8,44 +8,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/bom.css">
     <link rel="scripts" href="scripts/Bom.js">
-    <script src="scripts/Bom.js"></script>
+    
 </head>
 <main>
     <h1>📖 Book of Mormon - Top 10</h1>
     <label for="favchap">Enter Book and Chapter: </label>
     <input type="text" id="favchap" placeholder="Alma 5">
-    <button type="submit">Add Chapter</button>
+    <button type="button">Add Chapter</button>
     <ul id="list"></ul>
 </main>
 
 
-<script>
-const input = document.querySelector('#favchap');
-const button = document.querySelector('button');
-const list = document.querySelector('#list');
-
-  /* click btn to store my list */
-  button.addEventListener('click', () => {
-      const myItem = input.value;
-      input.value = '';
-
-      const li = document.createElement("li");
-      const deleteButton = document.createElement('button');
-      li.textContent = myItem;
-
-      deleteButton.textContent = 'X';
-      li.append(deleteButton);
-      list.append(li);
-
-      deleteButton.addEventListener('click', (e) => {
-          list.removeChild(li);
-          input.focus();
-          input.value = '';
-
-}); 
+<script src="scripts/bom3.js"></script>
 
 
-</script>
 </body>
 
 </html>
