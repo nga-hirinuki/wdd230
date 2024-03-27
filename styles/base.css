@@ -78,7 +78,7 @@ nav .active {
 .card, .card2 {
     background-color: rgb(255, 255, 255);
 }
-.card span, .card2 h2 {
+.card span, .card2 h2 span {
     /* custom styling for the label */
     background-color: #2d4131;
     display: block;
@@ -91,7 +91,7 @@ nav .active {
     margin: 1rem;
     line-height: 1.5;
 }
-.card ul, .card2 ul {
+.card ul, .card2 p {
     list-style-type: none;
     width: 95%;
     margin: auto;
