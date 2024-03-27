@@ -6,24 +6,21 @@
 }
 
 body {
-   
-    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-
+/*Toggle Button */
 #darkBtn {    
     padding: 5px 20px;
     position: absolute;
     top: 10px;
-    right: 10px; 
-   
+    right: 10px;
 }
 .dark {    
     background-color: black;
     color: white;
 }
-
-/*header and Navigation*/
-
+/*header */
 header {
     background-color: rgb(70, 102, 76);
     display: flex;
@@ -31,54 +28,57 @@ header {
     justify-content: center;
     padding: 20px;
 }
-.title {
-    font-size: 2rem;
-    }
+.temple-border {
+    position: relative;
+    width: 100%;
+    bottom:-200px;
+}
+#temple{
+    background-color: rgba(255, 255, 255, 0.753);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    color:  rgb(70, 102, 76);
+    border-radius: 15px;  
+    position: absolute;
+    text-align: center;
+    left:30%;
+    right:30%;
+    bottom:-20%;
+   
 
-header span {
-    color: white;
-    font-size: 3em;
-    padding: 20px;
 }
 
+/*navigation */
 nav {
     background-color: rgb(195, 221, 200);
-    margin: auto 0;
 }
-
 nav ul li {
     list-style-type: none;
+    
 }
-
 nav a {
     display: block;
     color: rgb(30, 50, 34);
     text-align: center;
-    padding: 1rem;
+    padding: .5rem;
     text-decoration: none;
+    font-size: 1.5rem;
 }
-
 nav a:hover {
-    background-color: rgb(50, 63, 50);
+    background-color: rgb(122, 159, 122);
     color: rgb(255, 255, 255);
 }
-
 nav .active {
     background-color: rgb(45, 65, 49);
     color: white;
 }
 
-/* sections learning activities and infomation */
-main h1 {
-    margin-top: 15px;
-    font-size: 1.5em;
-}
+/* sections one and two */
 
-.card {
-    background-color: white;
+.card, .card2 {
+    background-color: rgb(255, 255, 255);
 }
-
-.card span {
+.card span, .card2 h2 {
     /* custom styling for the label */
     background-color: #2d4131;
     display: block;
@@ -86,30 +86,58 @@ main h1 {
     padding: 10px;
     color: #fff;
 }
-
-.card a {
+.card a, .card2 a {
     /* paragraphs inside the sections */
     margin: 1rem;
     line-height: 1.5;
 }
-
-.card ul {
+.card ul, .card2 ul {
     list-style-type: none;
     width: 95%;
     margin: auto;
     padding-top: 10px;
 }
-
-.card li {
+.card li, .card2 li {
     list-style-type: none;
     padding: .3rem;
     color: black;
 }
+.card2 p {
+    text-align: center;
+    padding: 15px;
+}
+.card3 {
+    width: 98%;
+    display: block;
+    margin:auto;
+    grid-column: 1/4;
+}
 
+.label {
+	font-size: 16px;
+}
+
+#visits {
+	color: navy;
+	font-weight: bolder;
+	font-size: larger;
+}
+#g-map {
+    display: block;
+    text-align: center;
+   
+  
+}
 footer {
     background-color: #2d4131;
     color: white;
     height: 10vh;
     text-align: center;
     padding-top: 2vh;
+    
+}
+footer span {
+    top: 15px;
+    position: relative;
+    margin-left: 10px;
 }

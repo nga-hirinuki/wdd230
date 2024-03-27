@@ -28,11 +28,11 @@
 
 </head>
 
-<body id="main">
+<body id="switch">
 
     <header>
         <img src="images/dark.png" id="darkBtn" alt="toggle button">
-        <img src="images/nga-hirinuki.png" id="photo" alt="Nga Hirinuki" width="125" height="125">
+        <img src="images/nga-hirinuki.webp" id="photo" alt="Nga Hirinuki" width="125" height="125">
         <span class="title">Nga Hirinuki</span>
     </header>
 
@@ -46,6 +46,16 @@
     </nav>
 
     <main>
+       
+        <picture id="hero">
+            <div class="temple-border"><h1 id="temple">Hamilton Temple, New Zealand</h1></div>
+            <source srcset="wk03/images/hero-small-index.webp" media="(max-width: 400px)" loading="lazy">
+            <source srcset="wk03/images/hero-medium-index.webp" media="(max-width: 960px)" loading="lazy">
+            <source srcset="wk03/images/hero-large-index.webp" media="(max-width: 1500px)" loading="lazy">
+            <img src="wk03/images/hero-xlarge-index.webp" alt="temple" width="100%" height="auto" loading="lazy">
+        </picture>
+       
+
         <h1>WDD 230: Web Frontend Development</h1>
         <section class="card">
             <h2><span>Learning Activities</span></h2>
@@ -57,40 +67,60 @@
                         href="https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fnga-hirinuki.github.io%2Fwdd230%2F">fb</a>
                 </li>
                 <li>Week 03: <a href="wk03/images/landscape.webp">WebP</a> |<a href="wk03/lazyload.html">Lazy
-                        Load</a>| <a href="wk03/responsive-images.html">Responsive</a></li>| <a href="wk03/bom.html">BOM2</a></li>
+                        Load</a>| <a href="wk03/responsive-images.html">Responsive</a>|<a href="wk03/bom.html">BOM2</a></li>
                 <li>Week 04: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
                 <li>Week 05: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
                 <li>Week 06: <a href=""></a> |<a href=""></a>| <a href=""></a></li>
             </ul>
         </section>
 
-        <section class="card">
+        <section class="card2">
             <h2><span>Information</span></h2>
-            <ul>
-                <li><a>Auckland, New Zealand</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
+            <p>Henderson, Auckland. New Zealand </p>
+            <p>Number of Visits: <span class="visits"></span></p>
+
+            
+        </section>
+        <section class="card3">
+            <div id="g-map">
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6384.886175260951!2d174.62841697095826!3d-36.855811724506495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snz!4v1711536614996!5m2!1sen!2snz" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy2024 Nga Hirinuki Auckland New Zealand</p>
+        <p>&copy2024 Nga Hirinuki Auckland New Zealand<span><img src="images/nz-flag.webp" alt=""></span></p>
+        
         <p>Last Modification: 05/03/2024</p>
-
     </footer>
     <SCRIPT>
         const mybtn = document.querySelector("#darkBtn")
 
         mybtn.addEventListener("click", () => {
-            const main = document.querySelector("#main");
+            const main = document.querySelector("#switch");
             main.classList.toggle("dark");
         });
 
+        // 1️⃣ Initialize display element variable
+        const visitsDisplay = document.querySelector(".visits");
 
+        // 2️⃣ Get the stored VALUE for the numVisits-ls KEY in localStorage if it exists. If the numVisits KEY is missing, then assign 0 to the numVisits variable.
+        let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+
+        // 3️⃣ Determine if this is the first visit or display the number of visits. We wrote this example backwards in order for you to think deeply about the logic.
+        if (numVisits !== 0) {
+            visitsDisplay.textContent = numVisits;
+        } else {
+            visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
+        }
+
+        // 4️⃣ increment the number of visits by one.
+        numVisits++;
+
+        // 5️⃣ store the new visit total into localStorage, key=numVisits-ls
+        localStorage.setItem("numVisits-ls", numVisits);
+
+        // 💡A client can view the localStorage data using the Applications panel in the browsers's DevTools - check it out on any major site.
 
     </SCRIPT>
 </body>
